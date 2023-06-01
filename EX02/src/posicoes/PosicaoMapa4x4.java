@@ -48,8 +48,8 @@ public class PosicaoMapa4x4 {
     }
 
     boolean estaoMesmaPosicao(PosicaoMapa4x4 p1, PosicaoMapa4x4 p2){
-        
+
     }
 
- 
+ //TESTE
 }
