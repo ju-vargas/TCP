@@ -18,7 +18,7 @@ public class Imovel {
         System.out.println("Valor de venda: " + this.valorVenda);
         System.out.println();
     };
-
+    public double calculaImposto(){
         double imposto;
         imposto = (this.aluguel ? 0.10*this.valorVenda : 0.15*this.valorVenda ); 
         return imposto; 
