@@ -1,27 +1,26 @@
-//package entities;
+package universidade;
 
 
 public class Aluno {
-
 	private int numeroMatricula;
-	private int indiceDesempenho;
+	private float indiceDesempenho;
 	
 	public Aluno(){
 		numeroMatricula = 0; 
 		indiceDesempenho = 0; 
 	}
 	
-	public Aluno(int numeroMatricula, int indiceDesempenho){
+	public Aluno(int numeroMatricula, float indiceDesempenho){
 		this.numeroMatricula = numeroMatricula;
 		this.indiceDesempenho = indiceDesempenho;
 	}
 
-	public void aumentaIndiceDesempenho() {
-		this.indiceDesempenho++; 
+	public void aumentaIndiceDesempenho(float valueInc) {
+		this.indiceDesempenho = this.indiceDesempenho + valueInc; 
 	}
 
-	public void diminuiIndiceDesempenho() {
-		this.indiceDesempenho--; 
+	public void diminuiIndiceDesempenho(float valueDec) {
+		this.indiceDesempenho = this.indiceDesempenho - valueDec; 
 	}
 	
 	public int getNumeroMatricula() {
@@ -32,7 +31,7 @@ public class Aluno {
 		this.numeroMatricula = numeroMatricula; 
 	}
 
-	public int getIndiceDesempenho() {
+	public float getIndiceDesempenho() {
 		return this.indiceDesempenho; 
 	}
 
@@ -41,7 +40,8 @@ public class Aluno {
 	}
 	
 	public void imprime() {
-	
+		System.out.println("Matricula: " + this.getNumeroMatricula()); 
+		System.out.println("Desempenho: " + this.getIndiceDesempenho()); 
 	}
 
 }
