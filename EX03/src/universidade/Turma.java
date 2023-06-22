@@ -26,7 +26,7 @@ public class Turma {
 	public Turma(Professor professor, ArrayList<Monitor> monitoresList, ArrayList<Aluno> alunosList){
 		
 		if(alunosList.size() < MIN_ALUNOS || alunosList.size() > MAX_ALUNOS) {
-			System.out.println("Numero de alunos deve estar entre 5 e 35! A entrada " + numAlunos + " eh invalida!");
+			System.out.println("Numero de alunos deve estar entre minimo e maximo! A entrada " + numAlunos + " eh invalida!");
 		}
 		else if (monitoresList.size() > MAX_MONITORES) {
 			System.out.println("Numero de monitores nao deve ser maior que 3! A entrada " + numMonitores + " eh invalida!");
@@ -35,8 +35,8 @@ public class Turma {
 			this.numAlunos = alunosList.size();
 			this.numMonitores = monitoresList.size();
 			this.professor = professor;
-			this.monitores.clear();
-			this.alunos.clear();
+			this.monitores = monitoresList;
+			this.alunos = alunosList; 
 		}
 	}
 
