@@ -1,3 +1,6 @@
+package teste; 
+import poligonos.*;
+
 public class AplicacaoTestaPoli {
     
     public static void main(String[] args) {

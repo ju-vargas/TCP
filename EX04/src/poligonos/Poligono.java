@@ -2,9 +2,9 @@ package poligonos;
 
 
 //uma interface eh como um template para as classes
-interface Poligono{
-    int canvasSize = 100; 
+public interface Poligono {
+	public int canvasSize = 100;
+	public void imprimeTipoPoligono();
+	public float calculaArea();
 
-    public int calculaArea();
-    public void imprimeTipoPoligono();
 }
