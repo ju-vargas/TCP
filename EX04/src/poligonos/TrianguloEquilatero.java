@@ -1,7 +1,6 @@
 package poligonos;
  
-public abstract class TrianguloEquilatero extends Triangulo {
-    // float lado;
+public class TrianguloEquilatero extends Triangulo {
 
     public TrianguloEquilatero(float ladoA, float ladoB, float ladoC) {
         super(ladoA, ladoB, ladoC);
@@ -9,7 +8,8 @@ public abstract class TrianguloEquilatero extends Triangulo {
 
     @Override
 	public float calculaArea() {
-		return (float) (Math.sqrt(3)*(this.ladoA * this.ladoA))/4;
+        float ladoA = super.getLadoA();
+		return (float) (Math.sqrt(3)*(ladoA*ladoA))/4;
     }
 
     @Override
@@ -18,4 +18,3 @@ public abstract class TrianguloEquilatero extends Triangulo {
     }
 }
 
-3

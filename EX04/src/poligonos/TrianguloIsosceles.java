@@ -1,20 +1,14 @@
 package poligonos;
 
 public class TrianguloIsosceles extends Triangulo {
-        // float ladoA;
-        // float ladoB;
-        // float ladoC; 
-        // float altura;
-        // float base; 
-    
-
     public TrianguloIsosceles(float ladoA, float ladoB, float ladoC) {
         super(ladoA, ladoB, ladoC);
     }
 
 	public float calculaArea() {
-        this.altura = calculaAltura();
-		return super.calculaArea(this.base, this.altura);
+        float altura = calculaAltura();
+        float base = super.getBase();
+		return super.calculaArea(base, altura);
     }
 
     @Override
@@ -24,24 +18,27 @@ public class TrianguloIsosceles extends Triangulo {
 
 
     public float calculaAltura(){
-        if (this.ladoA == this.ladoB){
-            this.base = this.ladoC; 
-            return (float) Math.sqrt(Math.pow(ladoA, 2) - Math.pow(this.base/2, 2));
+        //ta certo isso?  
+        float ladoA = super.getLadoA();
+        float ladoB = super.getLadoB();
+        float ladoC = super.getLadoC();
+
+
+        if (ladoA == ladoB){
+            super.setBase(ladoC); 
+            return (float)Math.sqrt(Math.pow(ladoA, 2) - Math.pow(ladoC/2, 2));
         }
         
-        else if (this.ladoA == this.ladoC){
-            this.base = this.ladoB;
-            return (float) Math.sqrt(Math.pow(ladoA, 2) - Math.pow(this.base/2, 2));
+        else if (ladoA == ladoC){
+            super.setBase(ladoB); 
+            return (float) Math.sqrt(Math.pow(ladoA, 2) - Math.pow(ladoB/2, 2));
 
         }
         else{
-            this.base = this.ladoA; 
-            return (float) Math.sqrt(Math.pow(ladoB, 2) - Math.pow(this.base/2, 2));
+            super.setBase(ladoA); 
+            return (float) Math.sqrt(Math.pow(ladoB, 2) - Math.pow(ladoA/2, 2));
 
         }
-
-
-
     }
 
 }
